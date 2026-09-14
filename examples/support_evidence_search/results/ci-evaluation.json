@@ -1,0 +1,182 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "index": "evidence_ci",
+  "top_k": 3,
+  "corpus_sha256": "e196477488561a8f52f8b836e07b1f7a61e041f2fbe983b8b5f0385226502a41",
+  "metrics": {
+    "queries": 10,
+    "hit_at_1": 1.0,
+    "recall_at_k": 1.0,
+    "mrr_at_k": 1.0
+  },
+  "observations": [
+    {
+      "query": "The API says 429 and asks us to slow down. What should we inspect?",
+      "relevant": [
+        "rate_limit"
+      ],
+      "retrieved": [
+        "rate_limit",
+        "stale_cache",
+        "worker_memory"
+      ],
+      "seconds": 0.014696850999996514,
+      "citations": [
+        "corpus.json#rate_limit:0-317",
+        "corpus.json#stale_cache:0-314",
+        "corpus.json#worker_memory:0-310"
+      ]
+    },
+    {
+      "query": "My authorization stopped working after the access credential expired.",
+      "relevant": [
+        "expired_token"
+      ],
+      "retrieved": [
+        "expired_token",
+        "forbidden",
+        "cors"
+      ],
+      "seconds": 0.008520110000006298,
+      "citations": [
+        "corpus.json#expired_token:0-290",
+        "corpus.json#forbidden:0-270",
+        "corpus.json#cors:0-314"
+      ]
+    },
+    {
+      "query": "I am signed in but not allowed to access this resource.",
+      "relevant": [
+        "forbidden"
+      ],
+      "retrieved": [
+        "forbidden",
+        "expired_token",
+        "cors"
+      ],
+      "seconds": 0.008343550000006417,
+      "citations": [
+        "corpus.json#forbidden:0-270",
+        "corpus.json#expired_token:0-290",
+        "corpus.json#cors:0-314"
+      ]
+    },
+    {
+      "query": "SQLite cannot write because another transaction holds a lock.",
+      "relevant": [
+        "sql_lock"
+      ],
+      "category": "database",
+      "retrieved": [
+        "sql_lock",
+        "connection_pool"
+      ],
+      "seconds": 0.008178993000001356,
+      "citations": [
+        "corpus.json#sql_lock:0-308",
+        "corpus.json#connection_pool:0-293"
+      ]
+    },
+    {
+      "query": "Requests wait for a database connection until they time out.",
+      "relevant": [
+        "connection_pool"
+      ],
+      "category": "database",
+      "retrieved": [
+        "connection_pool",
+        "sql_lock"
+      ],
+      "seconds": 0.008084408000001986,
+      "citations": [
+        "corpus.json#connection_pool:0-293",
+        "corpus.json#sql_lock:0-308"
+      ]
+    },
+    {
+      "query": "Our processing worker is killed when memory usage becomes too high.",
+      "relevant": [
+        "worker_memory"
+      ],
+      "retrieved": [
+        "worker_memory",
+        "connection_pool",
+        "stale_cache"
+      ],
+      "seconds": 0.008080991000014137,
+      "citations": [
+        "corpus.json#worker_memory:0-310",
+        "corpus.json#connection_pool:0-293",
+        "corpus.json#stale_cache:0-314"
+      ]
+    },
+    {
+      "query": "How do we make repeated delivery of the same queued task safe?",
+      "relevant": [
+        "duplicate_job"
+      ],
+      "retrieved": [
+        "duplicate_job",
+        "rate_limit",
+        "stale_cache"
+      ],
+      "seconds": 0.008583136999988028,
+      "citations": [
+        "corpus.json#duplicate_job:0-304",
+        "corpus.json#rate_limit:0-317",
+        "corpus.json#stale_cache:0-314"
+      ]
+    },
+    {
+      "query": "The interface still shows the previous value after I save.",
+      "relevant": [
+        "stale_cache"
+      ],
+      "category": "frontend",
+      "retrieved": [
+        "stale_cache",
+        "cors"
+      ],
+      "seconds": 0.008437925999999152,
+      "citations": [
+        "corpus.json#stale_cache:0-314",
+        "corpus.json#cors:0-314"
+      ]
+    },
+    {
+      "query": "The browser rejects the preflight request to another origin.",
+      "relevant": [
+        "cors"
+      ],
+      "retrieved": [
+        "cors",
+        "stale_cache",
+        "forbidden"
+      ],
+      "seconds": 0.008250056000008499,
+      "citations": [
+        "corpus.json#cors:0-314",
+        "corpus.json#stale_cache:0-314",
+        "corpus.json#forbidden:0-270"
+      ]
+    },
+    {
+      "query": "A critical outage arrives while ten lower-priority tickets are open.",
+      "relevant": [
+        "incident_priority"
+      ],
+      "retrieved": [
+        "incident_priority",
+        "rate_limit",
+        "duplicate_job"
+      ],
+      "seconds": 0.00852288400000134,
+      "citations": [
+        "corpus.json#incident_priority:0-321",
+        "corpus.json#rate_limit:0-317",
+        "corpus.json#duplicate_job:0-304"
+      ]
+    }
+  ],
+  "scope": "Small synthetic demonstration; not a production accuracy benchmark or ATS score."
+}
