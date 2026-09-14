@@ -1,0 +1,12 @@
+[
+ {"query":"The API says 429 and asks us to slow down. What should we inspect?","relevant":["rate_limit"]},
+ {"query":"My authorization stopped working after the access credential expired.","relevant":["expired_token"]},
+ {"query":"I am signed in but not allowed to access this resource.","relevant":["forbidden"]},
+ {"query":"SQLite cannot write because another transaction holds a lock.","relevant":["sql_lock"],"category":"database"},
+ {"query":"Requests wait for a database connection until they time out.","relevant":["connection_pool"],"category":"database"},
+ {"query":"Our processing worker is killed when memory usage becomes too high.","relevant":["worker_memory"]},
+ {"query":"How do we make repeated delivery of the same queued task safe?","relevant":["duplicate_job"]},
+ {"query":"The interface still shows the previous value after I save.","relevant":["stale_cache"],"category":"frontend"},
+ {"query":"The browser rejects the preflight request to another origin.","relevant":["cors"]},
+ {"query":"A critical outage arrives while ten lower-priority tickets are open.","relevant":["incident_priority"]}
+]

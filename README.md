@@ -1,3 +1,13 @@
+## Portfolio addition: Support Evidence Search
+
+This is Pratyush Nandan's fork of Endee. The new September 2026 AI-assisted
+[Support Evidence Search example](examples/support_evidence_search/README.md)
+adds Python semantic retrieval, source citations, category filters and a small
+synthetic evaluation. The database engine below is upstream Endee work.
+See the example's [validation status](examples/support_evidence_search/VALIDATION.md).
+
+---
+
 <p align="center">
   <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">

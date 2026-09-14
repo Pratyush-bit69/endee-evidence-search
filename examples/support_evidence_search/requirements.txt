@@ -1,0 +1,2 @@
+endee==0.1.9
+fastembed==0.7.4
